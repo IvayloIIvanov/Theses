@@ -1,0 +1,108 @@
+\begin{thebibliography}{10}
+
+\bibitem{roth2021introduction}
+Thomas~E Roth, Ruichao Ma, and Weng~C Chew.
+\newblock An introduction to the transmon qubit for electromagnetic engineers.
+\newblock {\em arXiv preprint arXiv:2106.11352}, 2021.
+
+\bibitem{refrigeratorsuperconducting}
+George Rajna.
+\newblock Superconducting quantum refrigerator.
+\newblock {\em Citations to Articles Posted to Academia.edu}, 2019.
+
+\bibitem{hall1966helium}
+HE~Hall, PJ~Ford, and K~Thompson.
+\newblock A helium-3 dilution refrigerator.
+\newblock {\em Cryogenics}, 6(2):80--88, 1966.
+
+\bibitem{craig2004hitchhiker}
+Nathaniel Craig and Ted Lester.
+\newblock Hitchhiker’s guide to the dilution refrigerator.
+\newblock {\em Cited on}, page~21, 2004.
+
+\bibitem{martin2010closed}
+Florian Martin, Gerard Vermeulen, Philippe Camus, and Alain Benoit.
+\newblock A closed cycle 3he--4he dilution refrigerator insensitive to gravity.
+\newblock {\em Cryogenics}, 50(9):623--627, 2010.
+
+\bibitem{de2011basic}
+ATAM De~Waele.
+\newblock Basic operation of cryocoolers and related thermal machines.
+\newblock {\em Journal of Low Temperature Physics}, 164(5):179--236, 2011.
+
+\bibitem{wu2021strong}
+Yulin Wu, Wan-Su Bao, Sirui Cao, Fusheng Chen, Ming-Cheng Chen, Xiawei Chen,
+  Tung-Hsun Chung, Hui Deng, Yajie Du, Daojin Fan, et~al.
+\newblock Strong quantum computational advantage using a superconducting
+  quantum processor.
+\newblock {\em Physical review letters}, 127(18):180501, 2021.
+
+\bibitem{vitanov2010quantum}
+Nikolay~V Vitanov.
+\newblock Quantum transitions.
+\newblock {\em Introduction to Time-Dependent Quantum Dynamics of Atoms and
+  Molecules (St. Kliment Ohridski Univ. Press, Sofia, 2010)}.
+
+\bibitem{vitanov2001laser}
+Nikolay~V Vitanov, Thomas Halfmann, Bruce~W Shore, and Klaas Bergmann.
+\newblock Laser-induced population transfer by adiabatic passage techniques.
+\newblock {\em Annual review of physical chemistry}, 52(1):763--809, 2001.
+
+\bibitem{sussex_vitanov}
+Nikolay~V. Vitanov.
+\newblock Techniques for quantum control of simple quantum systems.
+\newblock {\em Quantum Optics and Quantum Information Group Department of
+  Physics, Sofia University, Bulgaria}, LIMQUET school in Brighton, February
+  26, 2019.
+
+\bibitem{nielsen2001quantum}
+Michael~A Nielsen and Isaac~L Chuang.
+\newblock Quantum computation and quantum information.
+\newblock {\em Phys. Today}, 54(2):60, 2001.
+
+\bibitem{jones2012quantum}
+Jonathan~A Jones and Dieter Jaksch.
+\newblock {\em Quantum information, computation and communication}.
+\newblock Cambridge University Press, 2012.
+
+\bibitem{gambetta2011analytic}
+Jay~M Gambetta, F~Motzoi, ST~Merkel, and Frank~K Wilhelm.
+\newblock Analytic control methods for high-fidelity unitary operations in a
+  weakly nonlinear oscillator.
+\newblock {\em Physical Review A}, 83(1):012308, 2011.
+
+\bibitem{torosov2022fast}
+Boyan~T Torosov and Nikolay~V Vitanov.
+\newblock Fast high-fidelity composite gates in superconducting qubits: Beating
+  the fourier leakage limit.
+\newblock {\em arXiv preprint arXiv:2205.04155}, 2022.
+
+\bibitem{drag}
+Drag.
+\newblock
+  \url{https://qiskit.org/documentation/stubs/qiskit.pulse.library.Drag.html}.
+
+\bibitem{motzoi2009simple}
+Felix Motzoi, Jay~M Gambetta, Patrick Rebentrost, and Frank~K Wilhelm.
+\newblock Simple pulses for elimination of leakage in weakly nonlinear qubits.
+\newblock {\em Physical review letters}, 103(11):110501, 2009.
+
+\bibitem{khaneja2005optimal}
+Navin Khaneja, Timo Reiss, Cindie Kehlet, Thomas Schulte-Herbr{\"u}ggen, and
+  Steffen~J Glaser.
+\newblock Optimal control of coupled spin dynamics: design of nmr pulse
+  sequences by gradient ascent algorithms.
+\newblock {\em Journal of magnetic resonance}, 172(2):296--305, 2005.
+
+\bibitem{broers1992efficient}
+B~Broers, HB~van~Linden van~den Heuvell, and LD~Noordam.
+\newblock Efficient population transfer in a three-level ladder system by
+  frequency-swept ultrashort laser pulses.
+\newblock {\em Physical review letters}, 69(14):2062, 1992.
+
+\bibitem{melinger1992generation}
+JS~Melinger, Suketu~R Gandhi, A~Hariharan, JX~Tull, and WS~Warren.
+\newblock Generation of narrowband inversion with broadband laser pulses.
+\newblock {\em Physical review letters}, 68(13):2000, 1992.
+
+\end{thebibliography}

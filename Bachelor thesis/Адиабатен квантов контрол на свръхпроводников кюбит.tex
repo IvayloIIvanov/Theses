@@ -1,0 +1,113 @@
+\documentclass[12pt]{report}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=30mm,
+    top=20mm,
+}
+\usepackage{amssymb}
+%\usepackage[superscript,biblabel]{cite}
+\usepackage{eso-pic}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{float}
+\usepackage{color}
+\usepackage{authblk}
+\usepackage[colorlinks=black,citecolor=black,urlcolor=blue,bookmarks=false,hypertexnames=true]{hyperref}
+\usepackage{latexsym}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{footnotebackref}
+\usepackage{setspace}
+\usepackage[labelformat=empty]{caption}
+\usepackage[T2A]{fontenc}
+\usepackage[bulgarian]{babel}
+\selectlanguage{bulgarian}
+
+\author{}
+
+\title{}
+\date{}
+
+\begin{document}
+
+    \begin{titlepage}
+        \begin{center}
+            \vspace*{3.5cm}
+            \Huge\textbf{Дипломна работа}\\
+            \vspace{0.5cm}
+            \Large
+            За придобиване на образователно-квалификационна степен \textbf{бакалавър}\\
+            \vspace{1cm}
+            \hrule
+            \vspace{0.45cm}
+            \Huge
+            \textbf{Адиабатен квантов контрол на свръхпроводников кюбит}\\
+            \vspace{0.45cm}
+            \hrule
+            \vspace{3cm}
+            \Large
+            \textit{Представена от:}\\
+            Ивайло Иванов  Иванов\\
+            Квантова и Космическа Теоретична Физика\\
+            Факултетен № 13131\\
+            \vspace{0.3cm}
+            Научен ръководител: акад. Николай Витанов\\
+            \vspace{5cm}
+            \begin{figure}[htp]
+                \centering
+                \includegraphics[width=330pt]{Untitled.png}
+            \end{figure}
+
+        \end{center}
+    \end{titlepage}
+
+        \large
+        \tableofcontents
+        \thispagestyle{empty}
+        \newpage
+
+    \clearpage
+    \pagenumbering{arabic}
+
+        \chapter*{Резюме}
+    \small \textit{Настоящата работа разглежда някои прложения на адиабатните методи за контрол над преходите на свръхпроводников кюбит
+    и по-нататъшното им реализиране в квантови системи като тези на IBM и Гугъл. Първоначално е предоставено кратко изложение на принципа
+    на действие на свръхпроводниковия кюбит, неговата реализация като част от цяла система при конструирането на квантови чипове и необходимата
+    апаратурата за конструирането на работещо квантово устройство. В края на тази глава са представени едни от най-добре развитите квантови устройства,
+    принципът им на работа, както и някои интересни планове за развитието на технологията на квантовите компютри в обозримо бъдеще. Изведени са вече
+    познатите модели на система с две нива -- резонансни и адиабатни решения без и с пресичане на нивата, като поотделно е обърнато внимание на отделните
+    видове пресичания при последните, реализиращи познатите в литературата квантови гейтове чрез различни крайни конфигурации на заселеност. Описани са и
+    системите с три нива, като отново е разгледано резонансното решение. Тук то се разделя на два подвида -- едно- и двуфотонен резонанс. Отделено
+    е специално внимание на системите с два детюнинга, като спецификата тук се състои в обосноваването на предположението, че най-високото по енергия ниво може
+    да бъде изолирано от останалите две, като по този начин последните формират система с две нива, която ефективно да може да се използва за изчислителна единица
+    (кюбит). Разгледани са и някои алтернативни методи за квантов контрол като бързи композитни гейтове с висока прецизност и DRAG и GRAPE алгоритмите,
+    регулиращи външното поле за постигане на по-добра защита от изтичане на заселеност към по-високи състояния (leakage errors).}\vspace{10mm}
+
+    \import{./}{Chapter 1.tex}
+
+    \import{./}{Chapter 2.tex}
+
+    \import{./}{Chapter 3.tex}
+
+    \import{./}{Chapter 4.tex}
+
+    \import{./}{Chapter 5.tex}
+    
+    \import{./}{Aknowledgements.tex}
+
+            \newpage
+            \thispagestyle{empty}
+            \bibliographystyle{unsrt}
+            \bibliography{citation}
+
+\end{document}
+  

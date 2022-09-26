@@ -1,0 +1,384 @@
+\chapter{Адиабатни решения за системи с две нива}
+
+    Адиабатната еволюция изисква наличието на следните условия:
+
+    \begin{itemize}
+        \item гладка зависимост от времето;
+        \item дълго време за еволюция на системата;
+        \item голяма честота на Раби и/или детюнинг.
+    \end{itemize}
+
+    Решаваме времезависимото уравнение на Шрьодингер:
+
+    \begin{equation} \label{3.1}
+        i\hbar \frac{d}{dt}\mathbf{C}(t) = \hat{H}(t)\mathbf{C}(t)
+    \end{equation}
+
+    където
+    \begin{equation}
+        \mathbf{C}(t) = [C_1(t), C_2(t)]^T
+    \end{equation}
+    е векторът стълб, чиито елементи задават амплитудите на вероятност съответно за състоянията $\psi_1$ и $\psi_2$, а $H(t)$ е Хамилтонианът, който за система с две нива има вида:
+
+    \begin{equation}
+        \hat{H}(t) = \hbar
+        \begin{bmatrix}
+            0 & \frac{1}{2}  \Omega (t) \\
+            \frac{1}{2}  \Omega (t) & \Delta (t)
+        \end{bmatrix}
+    \end{equation}
+
+    Това обаче е в непертурбирания базис от състояния на системата. За да решим диференциалното уравнение в адиабатния случай ще бъде по-удобно да използваме така наречения
+    \textit{адиабатен базис}, който се задава с трансформацията:
+
+    \begin{equation} \label{3.4}
+        \mathbf{C}(t) = \hat{R}[\theta(t)]\mathbf{a}(t)
+    \end{equation}
+
+    където с $\mathbf{a}(t) = [a_-(t), a_+(t)]^T$ сме задали векторът стълб в новия базис, а
+
+    \begin{equation} \label{3.5}
+        \hat{R}[\theta(t)] =
+        \begin{bmatrix}
+            \cos\theta (t) & \sin\theta (t)\\
+            -\sin\theta (t) & \cos\theta (t)
+        \end{bmatrix}
+    \end{equation}
+
+    е Ойлеровата матрица на въртене на ъгъл $\theta(t)$. В новия базис уравнение (\ref{3.1}) придобива вида:
+
+    \begin{equation}
+        i\hbar \frac{d}{dt}\mathbf{a}(t) = \hat{H}_a(t)\mathbf{a}(t)
+    \end{equation}
+
+    където
+
+    \begin{equation}
+        \hat{H}_a(t) = \hbar
+        \begin{bmatrix}
+            \lambda_- & -i\dot{\theta} (t)\\
+            i\dot{\theta} (t) & \lambda_+
+        \end{bmatrix}
+    \end{equation}
+    
+    е новият Хамилтониан, получен чрез унитарната трансформация:
+
+    \begin{equation}
+        \hat{H}_a(t) = \hat{R}[-\theta (t)]\hat{H}\hat{R}[\theta (t)] - i\hbar\hat{R}[-\theta (t)]\frac{d}{dt}\hat{R}[\theta (t)]
+    \end{equation}
+
+    В адиабатната граница:
+
+    \begin{equation}
+        \left\lvert \dot{\theta}(t)\right\rvert \ll  \lambda_+ - \lambda_-
+    \end{equation}
+
+    можем да пренебрегнем $\dot{\theta}(t)$. Тогава решението в адиабатния базис е:
+
+    \begin{equation}
+        \hat{U}_a (t,-\infty) =
+        \begin{bmatrix}
+            e^{-i\Lambda_-(t)} & 0 \\
+            0 & e^{-i\Lambda_+(t)}
+        \end{bmatrix}
+    \end{equation}
+
+    където $\Lambda_{\pm}(t) = \int_{-\infty}^{t} \lambda_{\pm}(t') \,dt' $.\\
+    За амплитудата получаваме еволюционния закон:
+
+    \begin{equation}
+        \mathbf{a}(t)=\hat{U}_a(t,-\infty)\mathbf{a}(-\infty)
+    \end{equation}
+
+    Използвайки трансформационния закон (\ref{3.4}) можем да се върнем в адиабатния базис:
+
+    \begin{equation}
+        \mathbf{C}(t) = \hat{R}\left[\theta(t)\right]\mathbf{a}(t) = \hat{R}\left[\theta(t)\right] \hat{U}_a(t,-\infty)\mathbf{a}(-\infty)
+        = \hat{R}\left[\theta(t)\right] \hat{U}_a(t,-\infty)\hat{R}\left[-\theta(-\infty)\right]\mathbf{C}(-\infty)
+    \end{equation}
+
+    където оператора $\hat{R}\left(\theta\right)$ се задава чрез уравнение (\ref{3.5}). \\
+    Елементите на вектора в адиабатния базис могат да се зададат чрез обратната трансформация на (\ref{3.4}) по следния начин:
+
+    \begin{subequations}
+        \begin{align}
+            a _+(t) = c_1 \sin\theta (t) + c_2 \cos\theta (t)\\
+            a_-(t) = c_1 \cos\theta (t) - c_2 \sin\theta (t)
+        \end{align}
+    \end{subequations}
+
+    където
+
+    \begin{equation}
+        \theta (t) = \frac{1}{2} \arctan\left(\frac{\Omega (t)}{\Delta (t)} \right)
+    \end{equation}
+
+    е ъгълът на смесване.\\
+    Собствените стойности на оператора на Хамилтън се задават с уравненията:
+
+    \begin{subequations}
+        \begin{align}
+            \hat{H}_a(t)a_+(t) = \hbar\lambda_+(t)a_+(t)\\
+            \hat{H}_a(t)a_-(t) = \hbar\lambda_-(t)a_-(t)
+        \end{align}
+    \end{subequations}
+
+    тук
+
+    \begin{equation}
+        \hbar\lambda_\pm(t) = \frac{1}{2}\hbar\left(\Delta (t)\pm \sqrt{\Delta^2(t)+\Omega^2(t)}\right)
+    \end{equation}
+
+    откъдето за разцепването по енергии веднага получаваме:
+
+    \begin{equation}
+        \hbar\lambda_+(t) - \hbar\lambda_-(t) = \hbar \sqrt{\Delta^2(t)+\Omega^2(t)} \ge \hbar\Delta(t)
+    \end{equation}
+    
+    \nocite{vitanov2001laser}
+
+    \section{Без пресичане на нивата}
+
+    За случая на адиабатен преход без пресичане на нивата правим следните предположения:
+
+    \begin{align}
+        & \Delta (t) > 0 \\
+        & \Omega (t) > 0 \\
+        & \Omega (t) \xrightarrow[]{t\rightarrow \pm \infty} 0
+    \end{align}
+
+    Горните предположения означават, че няма пресичане на нивата, вероятността за преход не зависи от знаците и че имаме пулсово поле. \\
+    От тях веднага се вижда че:
+
+    \begin{equation}
+        0 \xleftarrow[]{-\infty\leftarrow t}\frac{\Omega(t)}{\Delta(t)}\xrightarrow[]{t\rightarrow + \infty} 0
+    \end{equation}
+
+    \begin{center}
+        $\Downarrow$
+    \end{center}
+
+    \begin{equation}
+        0 \xleftarrow[]{-\infty\leftarrow t}\theta (t) = \frac{1}{2}\arctan \left(\frac{\Omega(t)}{\Delta(t)}\right)\xrightarrow[]{t\rightarrow + \infty} 0
+    \end{equation}
+
+    т.е в края на еволюцията всяко адиабатно състояние клони към същото адиабатно състояние. Получава се така нареченото пълно връщане на състоянието:
+
+    \begin{align}
+        c_2\xleftarrow[]{-\infty\leftarrow t}a_+(t) = c_1 \sin\theta (t) + c_2 \cos\theta (t) \xrightarrow[]{t\rightarrow + \infty} c_2\\
+        c_1 \xleftarrow[]{-\infty\leftarrow t} a_-(t) = c_1 \cos\theta (t) - c_2 \sin\theta (t)\xrightarrow[]{t\rightarrow + \infty} c_1
+    \end{align}
+
+    Всъщност по средата на процеса състоянието на системата може да бъде суперпозиция от двете състояния $c_1$ и $c_2$. В края на процеса обаче състоянието
+    на системата неминуемо се връща в началната си стойност.\\
+    Можем да запишем състоянието $c_1$ и по следния начин:
+
+    \begin{equation}
+        c_1 \rightarrow a_-(t) = c_1 \cos\theta(t) - c_2 \sin\theta(t) \rightarrow c_1 e^{i\alpha}
+    \end{equation}
+
+    където $\alpha = \frac{1}{2}\int_{-\infty}^{+\infty} \lambda_-(t) \,dt$ е адиабатната фаза.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=370pt]{4.png}
+    \end{figure}
+    \begin{center}
+        \small \textit{Фигура 9: Графика представяща времевата еволюция на енергиите (ляво) и на заселеностите (дясно) при адиабатна еволюция на система с две нива без пресичане на нивата.\\
+        Източник: Nikolay V. Vitanov, Techniques for Quantum Control of Simple Quantum Systems \cite{sussex_vitanov}}
+    \end{center}
+
+    \section{Пресичане на нивата}
+
+    Когато в системата присъства пресичане на енергетичните нива поне в един момент от прехода ($t_c$) честотната разлика ще бъде нула. За по-голяма простота ще разгледаме само едно
+    пресичане, като след това детюнинга отново започва да нараства. Правим следните предположения:
+
+    \begin{align}
+        & \Delta (t_c) = 0 \quad ; \quad \dot{\Delta}(t_c) > 0\\
+        & \Omega (t) > 0 \\
+        & \Omega (t) \xrightarrow[]{t\rightarrow \pm \infty} 0
+    \end{align}
+
+    Както преди имаме пулсово поле и заселеностите не зависят от знака на $\Omega$.
+    За ъгъла на смесване при $t\rightarrow \pm \infty$ получаваме:
+
+    % \begin{equation}
+    %     -\infty \xleftarrow[]{-\infty\leftarrow t}\frac{\Delta(t)}{\Omega(t)}\xrightarrow[]{t\rightarrow + \infty} +\infty
+    % \end{equation}
+
+    % \begin{center}
+    %     $\Downarrow$
+    % \end{center}
+
+    \begin{equation}
+        \frac{1}{2}\pi \xleftarrow[]{-\infty\leftarrow t}\theta (t) = \frac{1}{2}\arctan \left(\frac{\Omega(t)}{\Delta(t)}\right)\xrightarrow[]{t\rightarrow + \infty} 0
+    \end{equation}
+
+    Следователно системата ще преминава асимптотично от едно адиабатно състояние към друго, непертурбирано състояние. Получава се пълен популационен преход (пълна инверсия на състоянията):
+
+    \begin{align}
+        c_1\xleftarrow[]{-\infty\leftarrow t}a_+(t) = c_1 \sin\theta (t) + c_2 \cos\theta (t) \xrightarrow[]{t\rightarrow + \infty} c_2\\
+        -c_2 \xleftarrow[]{-\infty\leftarrow t} a_-(t) = c_1 \cos\theta (t) - c_2 \sin\theta (t)\xrightarrow[]{t\rightarrow + \infty} c_1
+    \end{align}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=370pt]{5.png}
+    \end{figure}
+    \begin{center}
+        \small \textit{Фигура 10: Графика представяща времевата еволюция на енергиите (ляво) и на заселеностите (дясно) при адиабатна еволюция на система с две нива с пресичане.\\
+        Източник: Nikolay V. Vitanov, Techniques for Quantum Control of Simple Quantum Systems \cite{sussex_vitanov}}
+    \end{center}
+
+    \subsection{Пълно пресичане на нивата (X Gate)}
+
+    За по-нататъшните ни разглеждания нека изберем стандартния базис $\ket{0} = \begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}$ и $\ket{1} = \begin{bmatrix}
+        0\\
+        1
+    \end{bmatrix}$. При пълно пресичане на нивата се получава преход, който разменя местата на базисните вектори ($\ket{0}$ отива в $\ket{1}$) и обратно.
+    Това е еквивалентно на познатия в литературата X Gate, който се задава с матрицата на Паули $\sigma_x = \begin{bmatrix}
+        0 & 1\\
+        1 & 0
+    \end{bmatrix}$.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=170pt]{16.png}
+    \end{figure}
+    \begin{center}
+        \small \textit{Фигура 11: Операцията X Gate разменя местата на състоянията в изчислителния базис.}
+    \end{center}
+
+    Лесно е да се види, че ако вземем единият базисен вектор, например $\ket{0}$
+    и приложим $\sigma_x$ ще получим другия базисен вектор:
+
+    \begin{equation}
+        \begin{bmatrix}
+            0 & 1\\
+            1 & 0
+        \end{bmatrix} \, \begin{bmatrix}
+            1\\
+            0
+        \end{bmatrix} = \begin{bmatrix}
+            0\\
+            1
+        \end{bmatrix}.
+    \end{equation}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=130pt]{14.png}
+    \end{figure}
+    \begin{center}
+        \small \textit{Фигура 12: На сферата на Блох операцията X Gate се представя като завъртане на 180$^\circ$ по оста z.}
+    \end{center}
+
+    \nocite{nielsen2001quantum}
+
+    \subsection{Полупресичане на нивата (Hadamard Gate)}
+
+    Както видяхме в глава 2, при прилагане на определен тип импулс можем да достигнем до състояние на суперпозиция между двете базисни състояния.
+    Това се оказва валидно и в случая, когато детюнинга е различен от нула. Операцията Hadamard Gate за система с две нива в общия случай се представя
+    в матричен вид по следния начин:
+    \begin{equation}
+        H = \frac{1}{\sqrt{2}} \begin{bmatrix}
+            1 & 1\\
+            1 & -1
+        \end{bmatrix}.
+    \end{equation}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=370pt]{21.png}
+    \end{figure}
+    \begin{center}
+        \small \textit{Фигура 13: Операцията Hadamard Gate създава суперпозиция от състояния в изчислителния базис.}
+    \end{center}
+
+    Ако подействаме на някой от базисните вектори $\ket{0}$ или $\ket{1}$ с този оператор ще видим, че в края на процеса векторът ще се
+    намира в състояние на суперпозиция между двата базисни вектора:
+
+    \begin{equation}
+        \frac{1}{\sqrt{2}} \begin{bmatrix}
+            1 & 1\\
+            1 & -1
+        \end{bmatrix} \begin{bmatrix}
+            1\\
+            0
+        \end{bmatrix} = \frac{1}{\sqrt{2}} \begin{bmatrix}
+            1\\
+            1
+        \end{bmatrix}.
+    \end{equation}
+    Това може да се представи и така:
+    \begin{equation}
+        \frac{\ket{0} +\ket{1}}{\sqrt{2}} \quad ,
+    \end{equation}
+    т.е. вероятността да измерим всеки един от базисните вектори е $50\%$.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=210pt]{15.png}
+    \end{figure}
+    \begin{center}
+        \small \textit{Фигура 14: Схема на операцията Hadamard Gate.}
+    \end{center}
+
+    Матрицата $H$ е унитарна, ермитова и инволютивна ($H^2 = \textit{I}$). Последното предполага, че при прилагане на опратора два пъти върху
+    даден базисен вектор, то в края трябва да получим същия базисен вектор. Нека проверим:
+
+    \begin{equation}
+        \frac{1}{2} \begin{bmatrix}
+            1 & 1\\
+            1 & -1
+        \end{bmatrix} \begin{bmatrix}
+            1 & 1\\
+            1 & -1
+        \end{bmatrix} \begin{bmatrix}
+            1\\
+            0
+        \end{bmatrix} = \frac{1}{2} \begin{bmatrix}
+            1 & 1\\
+            1 & -1
+        \end{bmatrix} \begin{bmatrix}
+            1\\
+            1
+        \end{bmatrix} = \frac{1}{2} \begin{bmatrix}
+            2\\
+            0
+        \end{bmatrix} = \begin{bmatrix}
+            1\\
+            0
+        \end{bmatrix}.
+    \end{equation}
+    На сферата на Блох операцията Hadamard Gate се представя като ротация на вектора на състоянието около оста $x + y$.
+    След завъртането векторът се намира по оста $x$: 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=140pt]{17.png}
+    \end{figure}
+    \begin{center}
+        \small \textit{Фигура 15: Hadamard Gate като ротация на вктора $\ket{0}$ до състояние на суперпозиция $\ket{x}$.}
+    \end{center}
+
+    \nocite{jones2012quantum}
+
+    \section{Заключение}
+
+    При решаването на задачата за адиабатна еволюция на хармоничен осцилатор забелязваме наличието на следните свойства:
+
+    \begin{enumerate}
+        \item В адиабатния базис не съществуват преходи между адиабатните състояния.
+        \item Адиабатния базис не зависи от знака на честотата на Раби ($\Omega$).
+        \item Адиабатния базис не зависи от знака на детюнинга ($\dot{\Delta}(t)$).
+        \item Адиабатната еволюция изисква гладка зависимост от времето и голяма честота на Раби и/или детюнинг.
+        \item За модела без пресичане на нивата е налично пълно връщане на заселеността в оригиналния базис
+        \item За модела с пресичане на нивата получаваме пълен преход между състоянията в оригиналния базис
+        \item При полупресичане на нивата получаваме, че новият вектор на състоянията е суперпозиция от базисните състояния.
+        \item Преходът между състоянията е устойчив на промени в параметрите на взаимодействието. Това означава, че промени в $\Omega$,
+        $\Delta$ или времето на взаимодействие не оказват влияние на прехода.
+    \end{enumerate}
